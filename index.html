@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <title>Title</title>
+    <title>Minesweeper</title>
 </head>
 <body>
 <div>
@@ -14,8 +14,26 @@
     </h1>
 </div>
 <div class="game">
-    <div class="mines"></div>
+    <div class="buttons">
+        <div class="mines-flags">
+            <div class="container">
+                <span>💣</span>
+                <span class="mines">20</span>
+            </div>
+            <div class="container">
+                <span>🚩</span>
+                <span id="count-flags">0</span>
+            </div>
+        </div>
+        <button class="btn" id="st">Start Game</button>
+        <div class="timers">
+            <span class="timer-emoji">⌛</span>
+            <div id="timer">00:00</div>
+        </div>
+    </div>
+    <div class="start-board"></div>
     <div class="board"></div>
+    <p id="game-over">Game Over!</p>
 </div>
 <script src="script.js"></script>
 </body>

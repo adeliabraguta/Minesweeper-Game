@@ -29,46 +29,189 @@ body {
 .game {
     background-color: #1F2933;
     border-radius: 4px;
-    padding: 12px 24px 24px 24px;
+    padding:24px 48px;
     border: 3px solid #CBD2D9;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.mines {
-    padding-bottom: 12px;
-    font-size: 20px;
-    color: #CBD2D9;
-}
+
 
 .board {
+    display: none;
+    justify-content: center;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+    gap: 5px;
+}
+.start-board {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(10, 35px);
     grid-template-rows: repeat(10, 35px);
     gap: 5px;
 }
-
 .tile {
     background-color: #323F4B;
     border-radius: 2px;
     cursor: pointer;
     /*box-shadow: #647ACB 0px 2px 4px 0px inset;*/
 }
-.mine:before{
-    content: "💣";
+
+.tile:hover{
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+
+}
+.start-tile {
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+    border-radius: 2px;
+    cursor: pointer;
+    /*box-shadow: #647ACB 0px 2px 4px 0px inset;*/
+}
+.not-allowed{
+    pointer-events: none;
+}
+.not-allowed:hover{
+    background-color: #323F4B;
+}
+.empty{
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.mine{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+
+
+}
+.flag{
     font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-.value{
+.buttons{
+    display: grid;
+    grid-template-columns:1fr  1.5fr 1fr;
+    /*justify-content: center;*/
+    align-items: center;
+    padding-bottom: 24px;
+}
+.mines-flags{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: start;
+    gap: 16px;
+}
+.mines {
+    font-size: 20px;
+    color: #CBD2D9;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#count-flags{
+    color: #CBD2D9;
+    font-size: 20px;
+}
+.btn{
+    background-color: #CBD2D9;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 2px;
+    width: 120px;
+    cursor: pointer;
+    transition: ease;
+    justify-self: center;
+}
+.timers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+
+}
+.timer-emoji{
+    font-size: 20px;
+}
+#timer{
+    color: #CBD2D9;
+    font-size: 20px;
+}
+.btn:hover{
+    color: #004440;
+    background-color: #8EEDD1;
+}
+#restart{
+    visibility: hidden;
+}
+#game-over{
+    margin: 0;
+    padding-top: 24px;
+    font-size: 24px;
+    visibility: hidden;
+    text-align: center;
+    letter-spacing: 1.1px;
+
+}
+.value1{
     font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #9AA5B1;
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+
 }
-.tile:hover{
-    background-color: #52606D;
+.value2{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #17B897;
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+
+
+}
+.value3 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F0B429;
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+}
+.value4 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AB091E;
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
+}
+.value5 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #960888;
+    background-color: #1F2933;
+    border: 2px solid #323F4B;
 }
